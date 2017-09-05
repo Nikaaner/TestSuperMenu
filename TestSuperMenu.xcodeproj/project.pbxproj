@@ -15,6 +15,7 @@
 		9594E5021F5EE69C00A1F47F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5011F5EE69C00A1F47F /* MapViewController.swift */; };
 		9594E5041F5EE8C900A1F47F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5031F5EE8C900A1F47F /* ResultsViewController.swift */; };
 		9594E5061F5EED3100A1F47F /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5051F5EED3100A1F47F /* UIStoryboard.swift */; };
+		9594E5091F5EF4C900A1F47F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5081F5EF4C900A1F47F /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9594E5011F5EE69C00A1F47F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		9594E5031F5EE8C900A1F47F /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9594E5051F5EED3100A1F47F /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
+		9594E5081F5EF4C900A1F47F /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		E9796F15702460488BD06E29 /* Pods-TestSuperMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSuperMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				9594E4B41F5ECF3600A1F47F /* AppDelegate.swift */,
+				9594E50A1F5EF4CE00A1F47F /* Models */,
 				9594E5071F5EED3600A1F47F /* Extensions */,
 				9594E4CB1F5ED7ED00A1F47F /* ViewControllers */,
 				9594E4CC1F5ED7FB00A1F47F /* Storyboards */,
@@ -125,6 +128,14 @@
 				9594E5051F5EED3100A1F47F /* UIStoryboard.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9594E50A1F5EF4CE00A1F47F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9594E5081F5EF4C900A1F47F /* Address.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C4F46340E116661BD9AE1CF3 /* Pods */ = {
@@ -280,6 +291,7 @@
 				9594E5021F5EE69C00A1F47F /* MapViewController.swift in Sources */,
 				9594E4B51F5ECF3600A1F47F /* AppDelegate.swift in Sources */,
 				9594E5041F5EE8C900A1F47F /* ResultsViewController.swift in Sources */,
+				9594E5091F5EF4C900A1F47F /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

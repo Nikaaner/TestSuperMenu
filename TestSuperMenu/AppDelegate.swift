@@ -7,7 +7,7 @@
 //
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private enum Defaults {
         static let yandexMapKitAPIKey = "YWUGe5blayMmRb2unn6S5EAS7PExZbIjam6FLdxeJWPiGkfppYQLN-mEbm-aTONsd4sCrLle60KrUxdD1HPDZURmQzujTFRlH~Es0lPP~X4="

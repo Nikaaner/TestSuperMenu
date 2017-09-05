@@ -6,7 +6,7 @@
 //  Copyright © 2017 AndriyHerasymyuk. All rights reserved.
 //
 
-class ResultsViewController: UITableViewController {
+final class ResultsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

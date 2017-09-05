@@ -6,13 +6,13 @@
 //  Copyright © 2017 AndriyHerasymyuk. All rights reserved.
 //
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
 
     // MARK: - Properties
     
     @IBOutlet fileprivate var mapView: YMKMapView!
     
-    var searchController: UISearchController!
+    fileprivate var searchController: UISearchController!
     
     // MARK: - Lifecycle
     
