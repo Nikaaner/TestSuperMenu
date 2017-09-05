@@ -6,8 +6,6 @@
 //  Copyright © 2017 AndriyHerasymyuk. All rights reserved.
 //
 
-import UIKit
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {

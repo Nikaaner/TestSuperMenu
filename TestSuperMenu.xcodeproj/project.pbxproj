@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7296A1CF08C1DC4668C1DFB1 /* Pods_TestSuperMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5290653C4E066316B80FAC /* Pods_TestSuperMenu.framework */; };
 		9594E4B51F5ECF3600A1F47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E4B41F5ECF3600A1F47F /* AppDelegate.swift */; };
 		9594E4B71F5ECF3600A1F47F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E4B61F5ECF3600A1F47F /* ViewController.swift */; };
 		9594E4BA1F5ECF3600A1F47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9594E4B81F5ECF3600A1F47F /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		116BBA090DFD474A61881804 /* Pods-TestSuperMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSuperMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu.release.xcconfig"; sourceTree = "<group>"; };
+		8E5290653C4E066316B80FAC /* Pods_TestSuperMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestSuperMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9594E4B11F5ECF3600A1F47F /* TestSuperMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSuperMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9594E4B41F5ECF3600A1F47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9594E4B61F5ECF3600A1F47F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,8 @@
 		9594E4BB1F5ECF3600A1F47F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9594E4BE1F5ECF3600A1F47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9594E4C01F5ECF3600A1F47F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9594E4C71F5ED3B200A1F47F /* TestSuperMenu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestSuperMenu-Bridging-Header.h"; sourceTree = "<group>"; };
+		E9796F15702460488BD06E29 /* Pods-TestSuperMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSuperMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7296A1CF08C1DC4668C1DFB1 /* Pods_TestSuperMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CC24E8121A9AB03CF53D7D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E5290653C4E066316B80FAC /* Pods_TestSuperMenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9594E4A81F5ECF3600A1F47F = {
 			isa = PBXGroup;
 			children = (
 				9594E4B31F5ECF3600A1F47F /* TestSuperMenu */,
 				9594E4B21F5ECF3600A1F47F /* Products */,
+				C4F46340E116661BD9AE1CF3 /* Pods */,
+				0CC24E8121A9AB03CF53D7D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +71,55 @@
 			isa = PBXGroup;
 			children = (
 				9594E4B41F5ECF3600A1F47F /* AppDelegate.swift */,
-				9594E4B61F5ECF3600A1F47F /* ViewController.swift */,
-				9594E4B81F5ECF3600A1F47F /* Main.storyboard */,
-				9594E4BB1F5ECF3600A1F47F /* Assets.xcassets */,
-				9594E4BD1F5ECF3600A1F47F /* LaunchScreen.storyboard */,
-				9594E4C01F5ECF3600A1F47F /* Info.plist */,
+				9594E4CB1F5ED7ED00A1F47F /* ViewControllers */,
+				9594E4CC1F5ED7FB00A1F47F /* Storyboards */,
+				9594E4CE1F5ED82A00A1F47F /* Resources */,
+				9594E4CD1F5ED81600A1F47F /* Supporting Files */,
 			);
 			path = TestSuperMenu;
+			sourceTree = "<group>";
+		};
+		9594E4CB1F5ED7ED00A1F47F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9594E4B61F5ECF3600A1F47F /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9594E4CC1F5ED7FB00A1F47F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9594E4BD1F5ECF3600A1F47F /* LaunchScreen.storyboard */,
+				9594E4B81F5ECF3600A1F47F /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		9594E4CD1F5ED81600A1F47F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9594E4C01F5ECF3600A1F47F /* Info.plist */,
+				9594E4C71F5ED3B200A1F47F /* TestSuperMenu-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9594E4CE1F5ED82A00A1F47F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9594E4BB1F5ECF3600A1F47F /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C4F46340E116661BD9AE1CF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9796F15702460488BD06E29 /* Pods-TestSuperMenu.debug.xcconfig */,
+				116BBA090DFD474A61881804 /* Pods-TestSuperMenu.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,10 +129,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9594E4C31F5ECF3600A1F47F /* Build configuration list for PBXNativeTarget "TestSuperMenu" */;
 			buildPhases = (
+				06E49EF938C28203B68F7D45 /* [CP] Check Pods Manifest.lock */,
 				9594E4AD1F5ECF3600A1F47F /* Sources */,
 				9594E4AE1F5ECF3600A1F47F /* Frameworks */,
 				9594E4AF1F5ECF3600A1F47F /* Resources */,
 				9594E4C61F5ED1F300A1F47F /* Run Script for adding warnings and errors */,
+				6CB7652BB90BD35AA84EDD3F /* [CP] Embed Pods Frameworks */,
+				AA62CC70ADE050AD7E126C43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -98,6 +159,7 @@
 					9594E4B01F5ECF3600A1F47F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = WK6DF5KMEZ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -134,6 +196,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		06E49EF938C28203B68F7D45 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6CB7652BB90BD35AA84EDD3F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9594E4C61F5ED1F300A1F47F /* Run Script for adding warnings and errors */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +239,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "TAGS=\" TODO:| FIXME:\"\nERRORTAG=\" ERROR:\"\nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$|($ERRORTAG).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\" | perl -p -e \"s/($ERRORTAG)/ error: \\$1/\"";
+		};
+		AA62CC70ADE050AD7E126C43 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -279,26 +386,33 @@
 		};
 		9594E4C41F5ECF3600A1F47F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9796F15702460488BD06E29 /* Pods-TestSuperMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WK6DF5KMEZ;
 				INFOPLIST_FILE = TestSuperMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AndriyHerasymyuk.TestSuperMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestSuperMenu/TestSuperMenu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		9594E4C51F5ECF3600A1F47F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 116BBA090DFD474A61881804 /* Pods-TestSuperMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WK6DF5KMEZ;
 				INFOPLIST_FILE = TestSuperMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = AndriyHerasymyuk.TestSuperMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TestSuperMenu/TestSuperMenu-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -322,6 +436,7 @@
 				9594E4C51F5ECF3600A1F47F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

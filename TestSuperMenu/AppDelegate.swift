@@ -6,16 +6,18 @@
 //  Copyright © 2017 AndriyHerasymyuk. All rights reserved.
 //
 
-import UIKit
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    private enum Defaults {
+        static let yandexMapKitAPIKey = "YWUGe5blayMmRb2unn6S5EAS7PExZbIjam6FLdxeJWPiGkfppYQLN-mEbm-aTONsd4sCrLle60KrUxdD1HPDZURmQzujTFRlH~Es0lPP~X4="
+    }
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        YMKConfiguration.sharedInstance().apiKey = Defaults.yandexMapKitAPIKey
         return true
     }
 
