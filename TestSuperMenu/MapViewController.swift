@@ -85,6 +85,14 @@ private extension MapViewController {
         mapView.setCenter(coordinate, atZoomLevel: 16, animated: false)
     }
     
+    func showAddressesList(near coordinate: CLLocationCoordinate2D) {
+        let resultsViewController: ResultsViewController = UIStoryboard(.Main).instantiateViewController()
+        resultsViewController.navigationBarIsHidden = false
+        resultsViewController.delegate = self
+        resultsViewController.coordinate = coordinate
+        present(resultsViewController, animated: true)
+    }
+    
 }
 
 // MARK: - YMKMapViewDelegate
@@ -115,11 +123,11 @@ extension MapViewController: YMKMapViewDelegate {
     }
     
     func mapView(_ mapView: YMKMapView!, annotationViewCalloutTapped view: YMKAnnotationView!) {
-        print("annotationViewCalloutTapped")
+        showAddressesList(near: view.annotation.coordinate())
     }
     
     func mapView(_ mapView: YMKMapView!, annotationView view: YMKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
-        print("calloutAccessoryControlTapped")
+        showAddressesList(near: view.annotation.coordinate())
     }
     
     func mapView(_ mapView: YMKMapView!, didUpdate userLocation: YMKUserLocation!) {
@@ -133,7 +141,12 @@ extension MapViewController: YMKMapViewDelegate {
 extension MapViewController: ResultsViewControllerDelegate {
     
     func sender(_ sender: ResultsViewController, didSelectAddress address: Address) {
-        searchController.isActive = false
+        if searchController.isActive {
+            searchController.isActive = false
+        } else {
+            sender.dismiss(animated: true)
+        }
+        
         if let annotation = AddressAnnotation(address) {
             showAnnotation(annotation, andSelect: true)
         }

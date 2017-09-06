@@ -12,28 +12,69 @@ protocol ResultsViewControllerDelegate: class {
     
 }
 
-final class ResultsViewController: UITableViewController {
+final class ResultsViewController: UIViewController {
     
     // MARK: - Properties
     
+    @IBOutlet fileprivate var tableView: UITableView!
+    @IBOutlet fileprivate var navigationBar: UINavigationBar!
+    
     weak var delegate: ResultsViewControllerDelegate?
+    
+    var coordinate: CLLocationCoordinate2D? {
+        didSet {
+            if let coordinate = coordinate {
+                loadAddresses(byСoordinate: coordinate)
+            } else {
+                addresses = nil
+            }
+        }
+    }
+    
+    var navigationBarIsHidden: Bool = true {
+        didSet {
+            guard navigationBar != nil else { return }
+            updateNavigationBarVisiblity()
+        }
+    }
     
     fileprivate var addresses: [Address]? {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    // MARK: - Lifecycle
+    
+    override func viewWillAppear(_ animated: Bool) {
+        updateNavigationBarVisiblity()
+    }
+    
+    // MARK: - Actions
 
+    @IBAction func cancelAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
+    
 }
 
 // MARK: - Private
 
 private extension ResultsViewController {
     
-    @objc func loadAddresses(by query: String) {
+    func updateNavigationBarVisiblity() {
+        navigationBar.isHidden = navigationBarIsHidden
+    }
+    
+    func loadAddresses(byСoordinate coordinate: CLLocationCoordinate2D) {
+        Address.addresses(by: coordinate) { [weak self] (addresses) in
+            self?.addresses = addresses
+        }
+    }
+    
+    @objc func loadAddresses(byQuery query: String) {
         Address.addresses(by: query) { [weak self] (addresses) in
             self?.addresses = addresses
-            print(addresses)
         }
     }
     
@@ -49,27 +90,27 @@ extension ResultsViewController: UISearchResultsUpdating {
             return
         }
         NSObject.cancelPreviousPerformRequests(withTarget: self)
-        perform(#selector(loadAddresses(by:)), with: query, afterDelay: 0.5)
+        perform(#selector(loadAddresses(byQuery:)), with: query, afterDelay: 0.5)
     }
     
 }
 
 // MARK: - UITableViewDataSource
 
-extension ResultsViewController {
+extension ResultsViewController: UITableViewDataSource {
     
     private enum CellIdentifier {
         static let basicCell = "BasicCell"
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return addresses?.count ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let address = addresses![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.basicCell, for: indexPath)
-        cell.textLabel?.text = address.name! + address.name!
+        cell.textLabel?.text = address.name
         return cell
     }
     
@@ -77,17 +118,17 @@ extension ResultsViewController {
 
 // MARK: - UITableViewDelegate
 
-extension ResultsViewController {
+extension ResultsViewController: UITableViewDelegate {
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
     
-    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let address = addresses![indexPath.row]
         delegate?.sender(self, didSelectAddress: address)
     }

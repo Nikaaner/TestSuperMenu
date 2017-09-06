@@ -11,20 +11,20 @@ class AddressAnnotation: NSObject, YMKAnnotation {
     // MARK: - Properties
     
     private let theCoordinate: YMKMapCoordinate
-    private let theTitle: String?
+    private let theSubtitle: String?
     
     // MARK: - Initializers
     
-    init(coordinate: YMKMapCoordinate, title: String?, subtitle: String?) {
+    init(coordinate: YMKMapCoordinate, title: String?) {
         self.theCoordinate = coordinate
-        self.theTitle = title
+        self.theSubtitle = title
     }
     
     convenience init?(_ address: Address) {
         guard let latitude = address.latitude, let longitude = address.longitude else {
             return nil
         }
-        self.init(coordinate: YMKMapCoordinate(latitude: latitude, longitude: longitude), title: address.name, subtitle: address.name)
+        self.init(coordinate: YMKMapCoordinate(latitude: latitude, longitude: longitude), title: address.name)
     }
     
     // MARK: - YMKAnnotation
@@ -33,8 +33,8 @@ class AddressAnnotation: NSObject, YMKAnnotation {
         return theCoordinate
     }
     
-    func title() -> String? {
-        return theTitle
+    func subtitle() -> String? {
+        return theSubtitle
     }
     
 }
