@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Map View Controller-->
+        <!--Delegate-->
         <scene sceneID="8Be-Ah-XN6">
             <objects>
                 <viewController id="R3X-Dg-bcx" customClass="MapViewController" customModule="TestSuperMenu" customModuleProvider="target" sceneMemberID="viewController">
@@ -24,12 +24,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9oq-Uy-nbn" customClass="YMKMapView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="R3X-Dg-bcx" id="VDG-ll-pZ0"/>
+                                </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25c-v5-L6f">
+                                <rect key="frame" x="325" y="617" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="15R-BK-u46"/>
+                                    <constraint firstAttribute="height" constant="40" id="hJe-sG-m4v"/>
+                                </constraints>
+                                <color key="tintColor" red="0.94117647058823528" green="0.27058823529411763" blue="0.25490196078431371" alpha="0.79628638698630139" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="ic_location"/>
+                                <connections>
+                                    <action selector="currentLocationAction:" destination="R3X-Dg-bcx" eventType="touchUpInside" id="LKS-Xv-SgU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9oq-Uy-nbn" firstAttribute="top" secondItem="FJU-Qc-OdQ" secondAttribute="bottom" id="0Ru-zi-OeS"/>
                             <constraint firstItem="8tk-5Z-mIz" firstAttribute="top" secondItem="9oq-Uy-nbn" secondAttribute="bottom" id="STn-N0-hdh"/>
+                            <constraint firstItem="8tk-5Z-mIz" firstAttribute="top" secondItem="25c-v5-L6f" secondAttribute="bottom" constant="10" id="fsi-Nx-VxI"/>
+                            <constraint firstAttribute="trailing" secondItem="25c-v5-L6f" secondAttribute="trailing" constant="10" id="oOx-pO-lJ7"/>
                             <constraint firstItem="9oq-Uy-nbn" firstAttribute="leading" secondItem="QYO-NF-0fH" secondAttribute="leading" id="qiL-If-VuA"/>
                             <constraint firstAttribute="trailing" secondItem="9oq-Uy-nbn" secondAttribute="trailing" id="x3d-dE-h3N"/>
                         </constraints>
@@ -47,7 +64,7 @@
         <scene sceneID="CIY-Ry-pqm">
             <objects>
                 <tableViewController storyboardIdentifier="ResultsViewController" id="WNH-U1-wpO" customClass="ResultsViewController" customModule="TestSuperMenu" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eno-ky-XKA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="eno-ky-XKA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.50347816780821919" colorSpace="calibratedWhite"/>
@@ -98,4 +115,7 @@
             <point key="canvasLocation" x="-460" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_location" width="60" height="60"/>
+    </resources>
 </document>

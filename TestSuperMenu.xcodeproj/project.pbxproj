@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7296A1CF08C1DC4668C1DFB1 /* Pods_TestSuperMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E5290653C4E066316B80FAC /* Pods_TestSuperMenu.framework */; };
+		9507110B1F5F3B9D0051B5F8 /* AddressAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507110A1F5F3B9D0051B5F8 /* AddressAnnotation.swift */; };
+		9507110D1F5FCB2F0051B5F8 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507110C1F5FCB2F0051B5F8 /* UIViewController.swift */; };
+		9507110F1F5FDC900051B5F8 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9507110E1F5FDC900051B5F8 /* UIColor.swift */; };
 		9594E4B51F5ECF3600A1F47F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E4B41F5ECF3600A1F47F /* AppDelegate.swift */; };
 		9594E4BA1F5ECF3600A1F47F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9594E4B81F5ECF3600A1F47F /* Main.storyboard */; };
 		9594E4BC1F5ECF3600A1F47F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9594E4BB1F5ECF3600A1F47F /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		116BBA090DFD474A61881804 /* Pods-TestSuperMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSuperMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu.release.xcconfig"; sourceTree = "<group>"; };
 		8E5290653C4E066316B80FAC /* Pods_TestSuperMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestSuperMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9507110A1F5F3B9D0051B5F8 /* AddressAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressAnnotation.swift; sourceTree = "<group>"; };
+		9507110C1F5FCB2F0051B5F8 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9507110E1F5FDC900051B5F8 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9594E4B11F5ECF3600A1F47F /* TestSuperMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSuperMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9594E4B41F5ECF3600A1F47F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9594E4B91F5ECF3600A1F47F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,7 +131,9 @@
 		9594E5071F5EED3600A1F47F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				9507110E1F5FDC900051B5F8 /* UIColor.swift */,
 				9594E5051F5EED3100A1F47F /* UIStoryboard.swift */,
+				9507110C1F5FCB2F0051B5F8 /* UIViewController.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				9594E5081F5EF4C900A1F47F /* Address.swift */,
+				9507110A1F5F3B9D0051B5F8 /* AddressAnnotation.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -287,9 +296,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9507110D1F5FCB2F0051B5F8 /* UIViewController.swift in Sources */,
 				9594E5061F5EED3100A1F47F /* UIStoryboard.swift in Sources */,
+				9507110B1F5F3B9D0051B5F8 /* AddressAnnotation.swift in Sources */,
 				9594E5021F5EE69C00A1F47F /* MapViewController.swift in Sources */,
 				9594E4B51F5ECF3600A1F47F /* AppDelegate.swift in Sources */,
+				9507110F1F5FDC900051B5F8 /* UIColor.swift in Sources */,
 				9594E5041F5EE8C900A1F47F /* ResultsViewController.swift in Sources */,
 				9594E5091F5EF4C900A1F47F /* Address.swift in Sources */,
 			);

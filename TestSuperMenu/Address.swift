@@ -24,11 +24,13 @@ struct Address: Mappable {
     // MARK: - Properties
     
     var identifier: Int?
-    var latitude: Float?
-    var longitude: Float?
+    var latitude: Double?
+    var longitude: Double?
     var name: String?
     
     // MARK: - Mappable
+    
+    init() {}
     
     init?(map: Map) {}
     
