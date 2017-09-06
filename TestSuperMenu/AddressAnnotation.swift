@@ -59,9 +59,14 @@ private extension AddressAnnotation {
     static func getTextComponents(from text: String) -> TextComponents {
         let separator = ", "
         let components = text.components(separatedBy: separator)
+       
         let limit = 3
         let title = components.prefix(limit).joined(separator: separator)
-        let subtitle = components.suffix(from: limit).joined(separator: separator)
+        
+        var subtitle = ""
+        if components.count > limit {
+            subtitle = components.suffix(from: limit).joined(separator: separator)
+        }
 
         let resultTitle: String? = title.isEmpty ? nil : title
         let resultSubtitle: String? = subtitle.isEmpty ? nil : subtitle

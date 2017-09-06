@@ -6,6 +6,8 @@
 //  Copyright © 2017 AndriyHerasymyuk. All rights reserved.
 //
 
+import AlamofireNetworkActivityIndicator
+
 @UIApplicationMain
 final class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -21,6 +23,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         YMKConfiguration.sharedInstance().apiKey = Defaults.yandexMapKitAPIKey
+        NetworkActivityIndicatorManager.shared.isEnabled = true
         setUpAppearance()
         return true
     }
