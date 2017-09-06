@@ -19,6 +19,7 @@
 		9594E5041F5EE8C900A1F47F /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5031F5EE8C900A1F47F /* ResultsViewController.swift */; };
 		9594E5061F5EED3100A1F47F /* UIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5051F5EED3100A1F47F /* UIStoryboard.swift */; };
 		9594E5091F5EF4C900A1F47F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594E5081F5EF4C900A1F47F /* Address.swift */; };
+		95E0D2B31F6027AA00F1A2E1 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0D2B21F6027AA00F1A2E1 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		9594E5031F5EE8C900A1F47F /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		9594E5051F5EED3100A1F47F /* UIStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIStoryboard.swift; sourceTree = "<group>"; };
 		9594E5081F5EF4C900A1F47F /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		95E0D2B21F6027AA00F1A2E1 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		E9796F15702460488BD06E29 /* Pods-TestSuperMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestSuperMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestSuperMenu/Pods-TestSuperMenu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 			children = (
 				9507110E1F5FDC900051B5F8 /* UIColor.swift */,
 				9594E5051F5EED3100A1F47F /* UIStoryboard.swift */,
+				95E0D2B21F6027AA00F1A2E1 /* UIView.swift */,
 				9507110C1F5FCB2F0051B5F8 /* UIViewController.swift */,
 			);
 			name = Extensions;
@@ -303,6 +306,7 @@
 				9594E4B51F5ECF3600A1F47F /* AppDelegate.swift in Sources */,
 				9507110F1F5FDC900051B5F8 /* UIColor.swift in Sources */,
 				9594E5041F5EE8C900A1F47F /* ResultsViewController.swift in Sources */,
+				95E0D2B31F6027AA00F1A2E1 /* UIView.swift in Sources */,
 				9594E5091F5EF4C900A1F47F /* Address.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,16 +20,7 @@ final class ResultsViewController: UIViewController {
     @IBOutlet fileprivate var navigationBar: UINavigationBar!
     
     weak var delegate: ResultsViewControllerDelegate?
-    
-    var coordinate: CLLocationCoordinate2D? {
-        didSet {
-            if let coordinate = coordinate {
-                loadAddresses(byСoordinate: coordinate)
-            } else {
-                addresses = nil
-            }
-        }
-    }
+    var coordinate: CLLocationCoordinate2D?
     
     var navigationBarIsHidden: Bool = true {
         didSet {
@@ -46,8 +37,13 @@ final class ResultsViewController: UIViewController {
     
     // MARK: - Lifecycle
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         updateNavigationBarVisiblity()
+        
+        if let coordinate = coordinate {
+            loadAddresses(byСoordinate: coordinate)
+        }
     }
     
     // MARK: - Actions
@@ -67,13 +63,17 @@ private extension ResultsViewController {
     }
     
     func loadAddresses(byСoordinate coordinate: CLLocationCoordinate2D) {
+        tableView.showActivityIndicator()
         Address.addresses(by: coordinate) { [weak self] (addresses) in
+            self?.tableView.hideActivityIndicator()
             self?.addresses = addresses
         }
     }
     
     @objc func loadAddresses(byQuery query: String) {
+        tableView.showActivityIndicator()
         Address.addresses(by: query) { [weak self] (addresses) in
+            self?.tableView.hideActivityIndicator()
             self?.addresses = addresses
         }
     }
