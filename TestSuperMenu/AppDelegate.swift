@@ -36,8 +36,13 @@ private extension AppDelegate {
     
     func setUpAppearance() {
         let navigationBarAppearace = UINavigationBar.appearance()
-        navigationBarAppearace.tintColor = UIColor.white
-        navigationBarAppearace.barTintColor = UIColor.flamingo
+        navigationBarAppearace.tintColor = .white
+        navigationBarAppearace.barTintColor = .flamingo
+        
+        if #available(iOS 9.0, *) {
+            let textFieldAppearance = UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self])
+            textFieldAppearance.tintColor = .flamingo
+        }
     }
     
 }

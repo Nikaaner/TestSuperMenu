@@ -117,7 +117,7 @@ extension MapViewController: YMKMapViewDelegate {
         calloutView?.annotation = annotation
         let rightButton = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
         rightButton.setImage(#imageLiteral(resourceName: "ic_list"), for: .normal)
-        rightButton.tintColor = UIColor.flamingo
+        rightButton.tintColor = .flamingo
         calloutView?.rightView = rightButton
         return calloutView
     }

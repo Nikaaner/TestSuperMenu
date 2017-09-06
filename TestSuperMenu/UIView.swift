@@ -23,7 +23,7 @@ extension UIView {
     
     private var newActivityIndicator: UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        activityIndicator.color = UIColor.black
+        activityIndicator.color = .black
         return activityIndicator
     }
     
